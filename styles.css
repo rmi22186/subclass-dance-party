@@ -21,26 +21,41 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 
-.dancer{
+/*.dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
-}
+}*/
 
-.blinky-dancer{
+.Blinky{
   border:10px solid blue;
   border-radius:10px;
   position:absolute;
 }
 
 .EDM{
+  border:10px solid yellow;
+  border-radius:10px;
+  position:absolute;
+}
+
+/*.Fred{
+  border:10px solid green;
+  border-radius:10px;
+  position:absolute;
+}*/
+
+/*refactor later*/
+
+.Fred-Down{
   border:10px solid green;
   border-radius:10px;
   position:absolute;
 }
 
-.Fred{
-  border:10px solid yellow;
+.Fred-Up{
+  border:10px solid green;
   border-radius:10px;
+  top: -80px;
   position:absolute;
 }
