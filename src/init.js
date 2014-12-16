@@ -33,7 +33,7 @@ $(document).ready(function(){
       // $("body").height() * Math.random(),
       // $("body").width() * Math.random(),
       ($("body").height()-250-250*Math.random()),
-      $("body").width() * Math.random(),
+      Math.max($("body").width()*Math.random()-100,100),
       Math.random() * 1000
     );
     // console.log(dancer);
