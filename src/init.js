@@ -1,6 +1,13 @@
 $(document).ready(function(){
   window.dancers = [];
-
+  $('.lineUpButton').on('click', function(event){
+    for (var i=0; i<window.dancers.length; i++) {
+      window.dancers[i].setPosition($("body").height()-250);
+    }
+  });
+  /*$('span').mouseover(function() {
+    $(this).animate({"left" : "-=50px"}, 500)
+  });*/
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
      * buttons on index.html. You should only need to make one small change to it.
@@ -15,6 +22,7 @@ $(document).ready(function(){
      * A new object of the given type will be created and added
      * to the stage.
      */
+    console.log(window.dancers);
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
@@ -22,12 +30,15 @@ $(document).ready(function(){
 
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
+      // $("body").height() * Math.random(),
+      // $("body").width() * Math.random(),
+      ($("body").height()-250-250*Math.random()),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     // console.log(dancer);
     $('body').append(dancer.$node);
+    window.dancers.push(dancer)
   });
 });
 

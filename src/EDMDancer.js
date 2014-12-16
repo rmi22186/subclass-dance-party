@@ -1,24 +1,25 @@
-var MakeFredDancer = function(top, left, timeBetweenSteps){
+var MakeEDMDancer = function(top, left, timeBetweenSteps){
   MakeDancer.call(this, top, left, timeBetweenSteps);
 
   // override classname to be fred-dancer-related
-  var cssStyle = 'Fred'
+  var cssStyle = 'EDM'
   this.$node = $('<span class="' + cssStyle +'"></span>');
 
   this.setPosition(top, left);
-
 };
 
-MakeFredDancer.prototype = Object.create(MakeDancer.prototype);
-MakeFredDancer.prototype.constructor = MakeFredDancer;
+MakeEDMDancer.prototype = Object.create(MakeDancer.prototype);
+MakeEDMDancer.prototype.constructor = MakeEDMDancer;
 
 
-/*MakeFredDancer.prototype.step = function(timeBetweenSteps){
-  MakeDancer.prototype.step.call(this, timeBetweenSteps);
+// MakeEDMDancer.prototype.step = function(timeBetweenSteps){
+//   MakeDancer.prototype.step.call(this, timeBetweenSteps);
 
-};*/
+//   this.$node.toggle();
 
-// MakeFredDancer.prototype.setPosition = function(top, left){
+// };
+
+// MakeEDMDancer.prototype.setPosition = function(top, left){
 //   // Use css top and left properties to position our <span> tag
 //   // where it belongs on the page. See http://api.jquery.com/css/
 //   var styleSettings = {
