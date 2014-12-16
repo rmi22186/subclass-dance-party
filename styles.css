@@ -20,8 +20,27 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
 .dancer{
   border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+
+.blinky-dancer{
+  border:10px solid blue;
+  border-radius:10px;
+  position:absolute;
+}
+
+.EDM{
+  border:10px solid green;
+  border-radius:10px;
+  position:absolute;
+}
+
+.Fred{
+  border:10px solid yellow;
   border-radius:10px;
   position:absolute;
 }

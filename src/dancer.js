@@ -1,8 +1,10 @@
 // Creates and returns a new dancer object that can step
 var MakeDancer = function(top, left, timeBetweenSteps){
 
+
+  var cssStyle = 'dancer'
   // use jQuery to create an HTML <span> tag
-  this.$node = $('<span class="dancer"></span>');
+  this.$node = $('<span class="' + cssStyle +'"></span>');
 
   this.step();
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
@@ -18,6 +20,7 @@ MakeDancer.prototype.step = function(timeBetweenSteps){
   // context of the instantiation to variable that, which
   // is then bound to the new instantiation context
   var that = this;
+
   setTimeout(that.step.bind(that), timeBetweenSteps);
 };
 
@@ -34,5 +37,4 @@ MakeDancer.prototype.setPosition = function(top, left){
 
 // test code
 /*var a = new MakeDancer(5, 5, 5);
-console.log(a);
-*/
+console.log(a);*/
