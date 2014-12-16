@@ -22,23 +22,27 @@ $(document).ready(function(){
      * A new object of the given type will be created and added
      * to the stage.
      */
-    console.log(window.dancers);
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
 
+    // calculates dancer y coordinate
+    var y = ($("body").height()-250-250*Math.random());
+    // calculates dancer x coordinate
+    var x = Math.max($("body").width()*Math.random()-100,100);
 
-    var dancer = new dancerMakerFunction(
-      // $("body").height() * Math.random(),
-      // $("body").width() * Math.random(),
-      ($("body").height()-250-250*Math.random()),
-      Math.max($("body").width()*Math.random()-100,100),
-      Math.random() * 1000
+
+    var dancer = new dancerMakerFunction(y, x, Math.random() * 1000
     );
-    // console.log(dancer);
+
+    // add coordinate properties to each dancer instance
+    dancer.y = y;
+    dancer.x = x;
+
     $('body').append(dancer.$node);
-    window.dancers.push(dancer)
+    window.dancers.push(dancer);
+
   });
 });
 
