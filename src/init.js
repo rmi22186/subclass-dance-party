@@ -36,26 +36,23 @@ $(document).ready(function(){
     window.dancers.push(dancer);
     counter++;
 
-    // var findPair = function() {
-      // check if dancers > 1
       if (counter > 1) {
-        // check if previous dancer pair is null
-        if (window.dancers[counter - 2].pair === null) {
-          // if (window.dancers[counter - 1].x < window.dancers[counter - 2].x) {                      // new instance moves toward no pair instance (which is the dancer[i -1])                                                                                           // determine coordiates of dancer[i -1] and dancer[i]
-            /*console.log(window.dancers[counter-1].$node)*/
-            $(window.dancers[counter-1].$node).animate({left: '250px'},1000)// if d2(x) is less than d1(x1)
-            /*console.log(window.dancers[counter-1].$node)*/
-            /*window.dancers[counter - 1].x = window.dancers[counter - 2].x - 100;*/                 // set d2(x) to d1(x + 10)
-            window.dancers[counter - 1].pair = true;
-            window.dancers[counter - 2].pair = true;
-          }
-         // change pair property to true for both [i and i -1]
-        }
-      // }
-    // } // end of findPair function
-    // console.log(this);
-    // setTimeout(findPair(), 2000);
+        var priorNode = window.dancers[counter - 2];
+        var currentNode = window.dancers[counter - 1];
 
+        if (priorNode.pair === null) {
+          // calculates distance to move currentNode to priorNode
+          var a = priorNode.x - currentNode.x;
+          var b = priorNode.y - currentNode.y;
+
+          // animates currentNode instance to priorNode instance
+          $(currentNode.$node).animate({left: '+='+a+'px', top:'+='+b+'px'},5000)
+
+          // sets a pair of instances to true
+          currentNode.pair = true;
+          priorNode.pair = true;
+        }
+      }
 
   }); // end of addDancer button
 });
