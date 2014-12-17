@@ -6,8 +6,6 @@ body{
   background-image: url(http://media.zenfs.com/en-US/video/video.pd2upload.com/video.yahoofinance.com@3bcfac20-8f43-37ec-9953-38e6cd43ac92_FULL.jpg);
   background-repeat: none;
   background-size: cover;
-  /*width: 100%;*/
-  /*background-color:#444;*/
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -25,46 +23,20 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 
-/*.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
-}*/
-
-
-
-.Blinky{
+.carlton{
   content: url(http://i.imgur.com/YdmGHYG.gif);
   height: 250px;
   position:absolute;
 }
 
-
-.EDM{
+.snoop{
   content: url(http://media.giphy.com/media/TeBpzQZRaBIC4/giphy.gif);
   height: 250px;
   position:absolute;
 }
 
-
-.Fred{
+.fred{
   content: url(http://i.stack.imgur.com/e8nZC.gif);
   height: 250px;
   position:absolute;
 }
-
-/*refactor later*/
-/*
-.Fred-Down{
-  border:10px solid green;
-  border-radius:10px;
-  position:absolute;
-}
-
-.Fred-Up{
-  border:10px solid green;
-  border-radius:10px;
-  top: -80px;
-  position:absolute;
-}
-*/

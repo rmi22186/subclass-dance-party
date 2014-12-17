@@ -8,9 +8,6 @@ $(document).ready(function(){
       window.dancers[i].setPosition($("body").height()-250);
     }
   });
-  /*$('span').mouseover(function() {
-    $(this).animate({"left" : "-=50px"}, 500)
-  });*/
 
   $(".addDancerButton").on("click", function(event){
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
