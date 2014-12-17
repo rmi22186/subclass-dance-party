@@ -20,7 +20,7 @@ MakeBlinkyDancer.prototype.step = function(timeBetweenSteps){
   MakeDancer.prototype.step.call(this, timeBetweenSteps);
 
   // something appears to be broken with how toggle currently runs
-  this.$node.toggle();
+  // this.$node.toggle();
 };
 
 // MakeBlinkyDancer.prototype.setPosition = function(top, left){

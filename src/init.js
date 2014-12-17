@@ -36,34 +36,26 @@ $(document).ready(function(){
     window.dancers.push(dancer);
     counter++;
 
-    // check if dancers > 1
-
-    if (counter -1 > 0) {
-      // check if previous dancer pair is null
-
-      if (window.dancers[0].pair === null) {
-        console.log(counter);
-        if (window.dancers[0].x === window.dancers[0].x) {
-          console.log(counter);
-          window.dancers[0].x = window.dancers[0].x - 50;
-          //console.log(window.dancers[counter]);
+    // var findPair = function() {
+      // check if dancers > 1
+      if (counter > 1) {
+        // check if previous dancer pair is null
+        if (window.dancers[counter - 2].pair === null) {
+          // if (window.dancers[counter - 1].x < window.dancers[counter - 2].x) {                      // new instance moves toward no pair instance (which is the dancer[i -1])                                                                                           // determine coordiates of dancer[i -1] and dancer[i]
+            /*console.log(window.dancers[counter-1].$node)*/
+            $(window.dancers[counter-1].$node).animate({left: '250px'},1000)// if d2(x) is less than d1(x1)
+            /*console.log(window.dancers[counter-1].$node)*/
+            /*window.dancers[counter - 1].x = window.dancers[counter - 2].x - 100;*/                 // set d2(x) to d1(x + 10)
+            window.dancers[counter - 1].pair = true;
+            window.dancers[counter - 2].pair = true;
+          }
+         // change pair property to true for both [i and i -1]
         }
-       // new instance moves toward no pair instance (which is the dancer[i -1])
-         // determine coordiates of dancer[i -1] and dancer[i]
-           // if d2(x) is less than d1(x1)
-             // set d2(x) to d1(x + 10)
-           // else
-             // set reverse to true
-           // same if scenario for y
-       // change pair property to true for both [i and i -1]
-
-      }
-    }
-    // if every dancer is paired or no other dancers exist
-       // leave new dancer instance alone
-
-    //console.log(dancer);
+      // }
+    // } // end of findPair function
+    // console.log(this);
+    // setTimeout(findPair(), 2000);
 
 
-  });
+  }); // end of addDancer button
 });
